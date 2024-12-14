@@ -90,3 +90,15 @@ console.log(vowelOrConsonant('c'));
 console.log(vowelOrConsonant('d'));
 console.log(vowelOrConsonant('e'));
 console.log(vowelOrConsonant('i'));
+
+// Alarm Clock
+function alarmClock(currentTime: number, targetTime: number): string {
+  if (currentTime === targetTime) {
+    return 'Alarm is ringing';
+  } else {
+    return 'Alarm is not ringing';
+  }
+}
+
+console.log(alarmClock(10, 10));
+console.log(alarmClock(10, 11));
