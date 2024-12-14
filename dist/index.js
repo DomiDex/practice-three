@@ -116,6 +116,19 @@ function alarmClock(currentTime, targetTime) {
 console.log(alarmClock(10, 10));
 console.log(alarmClock(10, 11));
 // Movie Ticket Price
+/*
+This code defines a function called movieTicketPrice that calculates the price of a movie ticket based on the age of the person and the day of the week.
+Let's break it down:
+1. Function Declaration:
+The function takes two parameters age and day of type string
+It returns a string (indicated by : string after the parentheses)
+Logic:
+- It checks the age and day of the week and returns the price of the ticket
+Testing:
+- The code includes three test cases to demonstrate the function's behavior
+Tests with different ages and days of the week to ensure the function works correctly
+This is a simple utility function that could be useful in scenarios where you need to calculate the price of a movie ticket based on the age of the person and the day of the week. The function is type-safe thanks to TypeScript's type annotations, ensuring that it only accepts strings as input and always returns a string.
+*/
 function movieTicketPrice(age, day) {
     if (age === 'child') {
         if (day === 'weekday') {
@@ -155,3 +168,26 @@ function movieTicketPrice(age, day) {
 console.log(movieTicketPrice('child', 'weekday'));
 console.log(movieTicketPrice('adult', 'weekend'));
 console.log(movieTicketPrice('senior', 'holiday'));
+// Sorting Three Numbers
+function sortingThreeNumbers(a, b, c) {
+    let numbers = [a, b, c];
+    if (a > b) {
+        let temp = a;
+        a = b;
+        b = temp;
+    }
+    if (a > c) {
+        let temp = a;
+        a = c;
+        c = temp;
+    }
+    if (b > c) {
+        let temp = b;
+        b = c;
+        c = temp;
+    }
+    return numbers;
+}
+console.log(sortingThreeNumbers(1, 2, 3)); // [1, 2, 3]
+console.log(sortingThreeNumbers(3, 2, 1)); // [1, 2, 3]
+console.log(sortingThreeNumbers(2, 3, 1)); // [1, 2, 3]
